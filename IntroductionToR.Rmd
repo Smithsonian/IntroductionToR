@@ -1,75 +1,76 @@
 ---
-title: "An intro to the R programming language"
-author: "Ramiro D Crego, Qiongyu Huang, Grant Connette, Fernanda Ribeiro, Jared Stabach & Joseph Kolowski"
-date: "`r format(Sys.time(), '%d %B %Y')`"
+title: "An Introduction to R Programming"
+author: "Smithsonian National Zoo & Conservation Biology Institute"
+date: '`r format(Sys.time(), "%d %B %Y")`'
 output:
   html_document:
-    toc: yes
+    toc: true
+    toc_depth: 4
     toc_float: 
-      collapsed: false
+      collapsed: true
       smooth_scroll: true
     number_sections: false
+pdf_document: default
 ---
 
-# An intro to the R programming language
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
 
-## What is R and why use R?
+<a href="https://github.com/Smithsonian/IntroductionToR.git" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
 
-**R** is a very powerful statistical programming language that is used broadly by researchers around the world.  **R** is an attractive programming language because it is free, open source, and platform independent.  With all the libraries that are available (and those that are in rapid development), it is quickly becoming a one-stop shop for all your analysis needs.  Most academic statisticians now use **R**, which has allowed for greater sharing of **R** code or packages to implement their recommended methods.  One of the very first things academics often ask when hiring someone is simply, "Can you describe your **R** or statistical programming experience?"  It is now critical to have this background to be competitive for scientific (and many other) positions. 
+# Introduction
+  >What is R?  Why use R?
 
-Among the reasons to use **R** you have:  
+[R](https://cran.r-project.org/) is a very powerful statistical programming language that is used broadly by researchers around the world.  [R](https://cran.r-project.org/) is an attractive programming language because it is free, open source, and platform independent.  With all the libraries that are available (and those that are in rapid development), it is quickly becoming a one-stop shop for most of your analysis needs in ecological statistics.  Most academic statisticians now use [R](https://cran.r-project.org/), which has allowed for greater sharing of [R](https://cran.r-project.org/) code and analysis packages to implement a variety of recommended methodologies.  One of the very first things academics often ask when hiring someone is simply, "Can you describe your [R](https://cran.r-project.org/) or statistical programming experience?"  It is now critical to have this background to be competitive for scientific (and many other) positions.
 
-1. It's free – open source! If you are a teacher or a student, the benefits are obvious.
-2. It runs on a variety of platforms including Windows, Unix and MacOS.
-3. It provides an unparalleled platform for programming new statistical methods in an easy and straightforward manner.
-4. It contains advanced statistical routines not yet available in other software.
+Among the reasons to use [R](https://cran.r-project.org/) include:  
+
+1. Free and open source! If you are a teacher or a student, the benefits are obvious.
+2. Runs on a variety of platforms including Windows, Unix and MacOS.
+3. An unparalleled platform for programming new statistical methods in an easy and straightforward manner.
+4. Contains advanced statistical routines not yet available in other software.
 5. New add-on “packages” are being created and updated constantly.
-6. It has state-of-the-art graphics capabilities.
+6. State-of-the-art graphics capabilities.
 
+[R](https://cran.r-project.org/) does have a steep learning curve that can often be intimidating to new users, particularly those without prior coding experience.  While this can be very frustrating in the initial stages, learning [R](https://cran.r-project.org/) is like learning a language where proficiency requires practice and continual use of the program.
 
-**R** does have a steep learning curve that can often be intimidating to new users, particularly those without prior coding experience.  While this can be very frustrating in the initial stages, learning **R** is like learning a language where proficiency requires practice and continual use of the program.
+Our advice is to push yourself to use this tool in everything you do.  At first, [R](https://cran.r-project.org/) will not be the easiest or quickest option.  With persistence, however, you will see the benefit of [R](https://cran.r-project.org/) and continue to find new ways to use it in your work.
 
-Our advice is to push yourself to use this tool in everything you do.  At first, **R** will not be the easiest or quickest option.  With persistence, however, you will see the benefit of **R** and continue to find new ways to use it in your work.
+## Installing R and R-Studio
 
-## R or RStudio? How to get them?
+[R](https://cran.r-project.org/) is available for Linux, MacOS X, and Windows (95 or later) platforms. Software can be downloaded from one of the [Comprehensive R Archive Network](https://cran.r-project.org/) (CRAN) mirror sites. It's best to choose the [R](https://cran.r-project.org/) mirror that is closest to your location.  Once installed, [R](https://cran.r-project.org/) will open a console where you run code. You can also work on a script file, where you can write and save your work. Other windows will show up on demand, such as the plot tab.
 
-**R** is available for Linux, MacOS X, and Windows (95 or later) platforms. Software can be downloaded from one of the [Comprehensive R Archive Network](https://cran.r-project.org/) (CRAN) mirror sites. Once installed, **R** will open a console where you run code. You can also work on a script file, where you can write and save your work, and other windows that will show up on demand such as the plot tab (Fig. 1). 
+[RStudio](https://www.rstudio.com/products/rstudio/download/) is an enterprise-ready professional software tool that integrates with [R](https://cran.r-project.org/) and known as an integrated development environment (IDE).  It has some nice features beyond the normal [R](https://cran.r-project.org/) interface, which many users feel it is easier to use than [R](https://cran.r-project.org/) (Fig. 1). Once you have installed [R](https://cran.r-project.org/), you should also download and install [RStudio](https://www.rstudio.com/products/rstudio/download/).  For this course, we will work exclusively in [RStudio](https://www.rstudio.com/products/rstudio/download/).
 
-![Figure 1. R console, script and plot tabs.](FIGURES/IntroToR_Fig1.png)
-
-
-**RStudio** is an enterprise-ready professional software tool that integrates with **R**.  It has some nice features beyond the normal **R** interface, which many users feel it is easier to use than **R** (Fig. 2). Once you have installed **R**, you should also download and install [RStudio](https://www.rstudio.com/products/rstudio/download/).  For this course, we will work exclusively in *RStudio*.
-
-![Figure 2. RStudio sowfware](FIGURES/IntroToR_Fig2.png)
-
+![Figure 1. R-Studio Interface, including 4 panels: Source Editor, Console, Workspace Browser (and History), and Plots (and Files, Packages, and Help).](IntroToR_Fig1.png)
 
 ## Getting Help
 
-One of the most useful commands in **R** is `?`.  At the command prompt (signified by `>` in your Console window), type `?` followed by any command and you will be prompted with a help tab for that command (e.g., `?mean` Fig. 3). You can also search through the help tab directly by searching functions on the search bar. 
+One of the most useful commands in [R](https://cran.r-project.org/) is `?`.  All [R](https://cran.r-project.org/) functions should have an associated help file. At the command prompt (signified by `>` in your Console window), type `?` followed by any command and you will be prompted with a help tab for that command (e.g., `?mean` Fig. 2). You can also search through the help tab directly by searching functions on the search bar. 
 
-![Figure 3. Getting help on R.](FIGURES/IntroToR_Fig3.png)
+![Figure 2. Getting help in R.](IntroToR_Fig2.png)
 
-The internet also contains a vast quantity of useful information.  There are blogs, mailing lists, and various websites (e.g., https://stackoverflow.com/) dedicated to providing information about **R**, its packages, and potential error messages that you may encounter (among other things).  The trick is usually determining the key terms to limit your search.  I generally start any web-based search with **"R-Cran"**, which limits and focuses the search.  Using "**R**" as part of your key terms does not, by itself, limit the search.
+<br>
+The internet also contains a vast quantity of useful information.  There are blogs, mailing lists, and various websites (e.g., https://stackoverflow.com/) dedicated to providing information about [R](https://cran.r-project.org/), its packages, and potential error messages that you may encounter (among other things).  The trick is usually determining the key terms to limit your search.  I generally start any web-based search with *"R-Cran"*, which limits and focuses the search.  Using "*R*" as part of your key terms does not, by itself, limit the search.
 
-## Basic R concepts
+# Basic R Concepts
 
-There are a few concepts that are important to keep in mind before you start coding. The fact that **R** is a programming language may deter some users who think “I can't program". This should not be the case for two reasons. First, **R** is an interpreted language, not a compiled one, meaning that all commands typed on the keyboard are directly executed without requiring you to build a complete program like in most computer languages (C, Pascal, . . . ). Second, **R**'s syntax is very simple and intuitive. For instance, a linear regression can be done with the command `lm(y ~ x)` which means fitting a linear model with y as the response and x as a predictor.
+There are a few concepts that are important to keep in mind before you start coding. The fact that [R](https://cran.r-project.org/) is a programming language may deter some users who think “I can't program". This should not be the case for two reasons. First, [R](https://cran.r-project.org/) is an interpreted language, not a compiled one, meaning that all commands typed on the keyboard are directly executed without requiring you to build a complete program like in most computer languages (e.g., C, Pascal). Second, [R](https://cran.r-project.org/)'s syntax is very simple and intuitive. For instance, a linear regression can be done with the command `lm(y ~ x)` which means fitting a linear model with `y` as the response and `x` as a predictor.
 
-In **R**, in order to be executed, a function always needs to be written with parentheses, even if there is nothing within them (e.g., `ls()`). If you type the name of a function without parentheses, **R** will display the content of the function.
+In [R](https://cran.r-project.org/), in order for a command to be executed, a function always needs to be written with parentheses, even if there is nothing within the parentheses (e.g., `ls()` instead of `ls`). If you type the name of a function without parentheses, [R](https://cran.r-project.org/) will display the content of the function.  See what happens when typing `ls` in the Console.
 
-When **R** is running, variables, data, functions, results, etc..., are stored in the active memory of the computer in the form of objects that you assign a name.The user can do actions on these objects with operators (arithmetic, logical, comparison, . . . ) and functions (which are themselves objects).
+When working with [R](https://cran.r-project.org/), variables, data, functions, results, are stored in the active memory of the computer in the form of objects that you assign with a name (`x = c(1,2,3)`). The user can then execute actions on these objects with operators (arithmetic, logical, comparison) and functions (e.g., `x + 3`).
 
-The name of an object must start with a letter (A-Z or a-z) and can be followed by letters, digits (0-9), dots (.), and underscores (_). 
+The name of an object must start with a letter (A-Z or a-z) and can be followed by letters, digits (0-9), dots (.), and underscores (_). Do **not** include spaces. 
 
-When referring to the directory of a folder or a data file, **R** uses forward slash "/". You need to pay close attention to the direction of the slash if you copy a file path or directory from a Windows machine. 
+When referring to the directory of a folder or a data file, [R](https://cran.r-project.org/) uses forward slash "/". You need to pay close attention to the direction of the slash if you copy a file path or directory from a Windows machine. 
 
-It is also important to know that **R** discriminates between uppercase and lowercase letters in the names of objects, so that x and X can name two distinct objects (even under Windows).
+It is also important to know that [R](https://cran.r-project.org/) discriminates between uppercase and lowercase letters in the names of objects, so that `x` and `X` can name two distinct objects.
 
-***
+# Starting R
 
-## Starting with R
-
-### Setting your working directory
+## Setting your working directory
 
 Like in many other programs, you should start your session by defining your working directory - the folder where you will work. This will be the location on your computer where any files you save will be located.  To determine your current working directory, type: 
 
@@ -77,20 +78,31 @@ Like in many other programs, you should start your session by defining your work
 getwd()
 ```
 
-Use `setwd()` to change or set a new working directory. For instance, you can set your working directory to be in your Documents folder on the C: drive, or in any folder you prefer.
+Use `setwd()` to change or set a new working directory. For instance, you can set your working directory to be in your Documents folder on the `C:/` drive, or in any folder you prefer.  
 
 ```{r, eval = F}
 setwd("C:/Documents/R_Practice")
 ```
 
-In *RStudio*, you can do some basic operations, such as setting your working directory, using the point-and-click interface: Session > Set Working Directory > Choose Directory ... as shown in Fig. 4.
+If you prefer, you can also set your working directory using the point-and-click method: Session > Set Working Directory > Choose Directory ... as shown in Fig. 3.
 
-![Figure 4. Setting working directory in RStudio](FIGURES/IntroToR_Fig4.png)
+![Figure 3. Setting working directory in RStudio](IntroToR_Fig3.png)
 
-## **R** Fundamentals 
-### Data Types
+<br>
+If you are using a pre-defined [RStudio](https://posit.co/download/rstudio-desktop/) instance, like we are here, there is no need to set your working directory.  This is very convenient, as the relative paths are maintained, allowing us to share share directories without a need to set the absolute path. 
 
-There are four fundamental data types in **R** that you will work with: 
+Data are often stored in subfolders to maintain organization in your projects. In those cases, it is not necessary to provide the full path information when accessing the file, as long as the location of the file is within the root directory you have previously set or are working in. For instance, a table stored in a subfolder within your root directory named *Data* (`D:/Courses/NASA_EcologicalConservation/1_IntroductionToR`), can be accessed without providing the complete directory information. For example, you can point to the *Data* subfolder when reading the table as in the example below.  You can, however, always provide the full directory of a data file stored on your local drive to avoid confusion.
+
+```{r, eval=F}
+# Example
+table <- read.csv(file="Data/TheDataIWantToReadIn.csv", header=TRUE) # read a csv table stored in the data folder
+```
+
+# R Fundamentals
+
+## Data Types
+
+There are four fundamental data types in [R](https://cran.r-project.org/) that you will work with: 
 
 1. Character
 2. Numeric
@@ -100,50 +112,39 @@ There are four fundamental data types in **R** that you will work with:
 You can check the data type of an object using the function `class()`. To convert between data types you can use: `as.integer()`,  `as.numeric()`, `as.logical()`, `as. character()`.
 
 For instance:
-```{r}
+```{r Data Types, message = FALSE, warning = FALSE}
 city <- 'Nairobi'
 class(city)
-```
-```{r}
+
 number <- 3
 class(number)
-```
-```{r}
+
 Integer <- as.integer(number)
 class(Integer)
-```
-```{r}
+
 logical <- 3 > 5
 logical
 ```
 
-### Assigning data to objects
-Since **R** is a programming language, we can store information as objects to avoid unnecessary repetition.  *Note again that values are case sensitive; 'x' is not the same as 'X'!*
+## Assigning Data to Objects
+Since [R](https://cran.r-project.org/) is a programming language, we can store information as objects to avoid unnecessary repetition.  **Note**: Values are case sensitive (e.g., `x` is not the same as `X`)!
 
-```{r, eval=F}
+```{r, eval=T}
 city <- "front royal"
 summary(city)
 
 number <- 2
 summary(number)
 
-character <- as.character(2)
+numbers <- c(1,3,5,12)
+summary(numbers)
 ```
 
-Data are very often stored in different folders to maintain an organizational pattern in your projects. In those cases, it is not necessary to re-set the working directory every time we want to import files to **R** that are stored in different folders, as long as these folders are within the root directory you have previously set. For instance, let's say you have a table stored in a folder called *data*, which is a subfolder within your root working directory *(C:/Documents/R_Practice)*. You can point to the *data* folder when reading the table as in the example below:
-
-```{r, eval=F}
-table <- read.csv(file="data/TheDataIWantToReadIn.csv", header=TRUE) # read a csv table stored in the data folder
-```
-
-Note that because *data* is a subfolder in your root directory, you do not need to provide the complete directory information when reading the table **"data/TheDataIWantToReadIn.csv"**. You can always provide the full directory of a data file stored on your local drive to avoid confusion. 
-
-### Special characters
-
-The # character is used to add comments to your code. # indicates the beginning of a comment and everything after # on a line will be ignored and not run as code.  Adding comments to your code is considered good practice because it allows you to describe in plain language (for yourself or others) what your code is doing.
+## Special Characters
+The `#` character is used to add comments to your code. `#` indicates the beginning of a comment and everything after `#` on a line will be ignored and not run as code.  Adding comments to your code is considered good practice because it allows you to describe in plain language (for yourself or others) what your code is doing.
 
 ```{r}
-#This is a comment
+# This is a comment
 ```
 
 The semicolon (;) defines a line continuation character so that you can write different commands on the same line of code.
@@ -155,11 +156,10 @@ b
 c
 ```
 
-## R Data Structure
+# R Data Structure
 
-### Vectors
-
-Vectors are a basic data structure in **R**.  They contain a sequence of data and can contain characters, numbers, or be TRUE/FALSE values.  *Remember: If you are unsure or need help, use the help function (e.g., `help(seq)` or `?seq`)*.  Below are several ways to create vectors in **R**.
+## Vectors
+Vectors are a basic data structure in [R](https://cran.r-project.org/).  They contain a sequence of data and can contain characters, numbers, or be TRUE/FALSE values.  **Remember**: If you are unsure or need help, use the help function (e.g., `help(seq)` or `?seq`).  Below are several ways to create vectors in [R](https://cran.r-project.org/).
 
 ```{r vectors}
 1:20
@@ -169,27 +169,36 @@ rep(1:5,5)
 rep("A rolling stone gathers no moss",4)
 ```
 
-#### Extract subset of values from a vector using [] notation
+### Using Vector Notation
+To see only part (i.e., a subset) of the data stored in a vector, you need to "ask" [R](https://cran.r-project.org/) to extract the information you want using square brackets (e.g., `[]`). Most commonly, you will indicate in square brackets the position of the data you want to extract (from beginning of the vector [1] to the Nth slot in the vector [n]).  
 
-
-```{r Values}
+  >Show the first 5 values of a vector of 10 numbers from 1 to 10
+  
+```{r}
 x <- 1:10
-y <- c(1.5, 9, 3.46, 12.2)
-```
-
-To see only part (i.e., a subset) of the data stored in a vector, you need to "ask" **R** to extract the information you want using square brackets. Most commonly, you will indicate in square brackets the position of the data you want to extract (from beginning of the vector [1] to the Nth slot in the vector [n]).  If you only wanted to see the first 5 values of 'x', how would you do that?  Or only the 2nd and 4th element of y?  What if you wanted to see all the records in `y`, except for the 2nd and 3rd records? There are more ways to use notation to select subsets of data, which we will cover in more detail below. 
-
-```{r print}
 x
-(x <- 1:10)
 x[1:5]
-y[c(2,4)]
-y[-c(2,3)]
+```  
+
+  >Show the 5th value of the same vector
+
+```{r}
+x[5]
 ```
 
+  >Show the 2nd and 4th element of x
+  
+```{r}  
+x[c(2,4)]
+```
+  
+  >Show all values except for the 2nd and 8th element of x
+  
+```{r}
+x[-c(2,8)]
+```
 
-### Matrices and Dataframes
-
+## Matrices and Dataframes
 Matrices and dataframes are common ways to store tabular data.  Understanding how to manipulate them is important to be able to conduct more complex analyses.  Both matrices and dataframes are composed of rows and columns.  The main difference between matrices and dataframes is that dataframes can contain many different classes of data (numeric, character, etc.), while matrices can only contain a single class.
 
 Create a matrix with 4 rows and 5 columns using the data from `x` above.  Consult the help (e.g., `help(matrix)` or `?matrix`) to determine the syntax required.
@@ -201,37 +210,36 @@ test_matrix
 superman <- matrix(data = x, nrow = 4, ncol = 5)
 ```
 
-
-#### Subset of Matrices and Dataframes
-Now, if we wanted to reference any value in the matrix, we could do so with matrix notation.  The first value in matrix notation references the row and the second value references the column.  COMMIT THIS TO MEMORY!  I remember this by thinking **R**oman **C**atholic.  So, if you wanted to view only the value in the 1st row, 5th column, you'd type:
+### Subset Matrices and Dataframes
+Now, if we wanted to reference any value in the matrix, we could do so with matrix notation.  The first value in matrix notation references the row and the second value references the column.  **COMMIT THIS TO MEMORY!**  I remember this by thinking **R**oman **C**atholic.  So, if you wanted to view only the value in the 1st row, 5th column, you'd type:
 
 ``` {r Matrix notation}
 #test_matrix(row,column)
 test_matrix[1,5]
 ```
 
-In addition to using positive integers to indicate the exact location of the subset of data we want to extract, you can also use other notation to indicate subsets of data that you want to include or exclude. You can use: negative integers (to exclude data at a specific location), zero (to create empty objects with consistent format), blank spaces (to select the entire row/column), logical values (to select the data associated with TRUE values), or names (to select specific columns or rows by their names). Try to understand how each type of notation works!
+In addition to using positive integers to indicate the exact location of the subset of data we want to extract, you can also use other notation to indicate subsets of data that you want to include or exclude. You can use negative integers (to exclude data at a specific location), zero (to create empty objects with consistent format), blank spaces (to select the entire row/column), logical values (to select the data associated with TRUE values), or names (to select specific columns or rows by their names). Try to understand how each type of notation works!
 
-
-For example, what if you wanted to view all the values in the 5th column?  This literally says, extract all rows but only the 5th column from the object called test_matrix.
-
+  >Print (view) all the values in the 5th column?  
+  
 ``` {r Matrix notation2}
 test_matrix[,5]
+# This literally says, extract all rows but only the 5th column from the object called test_matrix.
 ```
 
-What about the 4th row? 
+  >Print all values in the 4th row? 
 
 ``` {r Matrix notation2b}
 test_matrix[4,]
 ```
 
-What if we wanted to view the values in the 3rd row, but only the 2nd and 4th columns?
+  >Print all values in the 3rd row, but only the 2nd and 4th columns?
 
 ``` {r Matrix notation2c}
-test_matrix[3,c(2,4)]
+test_matrix[3, c(2,4)]
 ```
 
-What happens to the matrix if we append a character field?  Use the `cbind()` (column bind) command to bind a new column, called 'countries'.  Note that I am not changing the contents of test_matrix.  Can you figure out how to do a row bind (hint: use `rbind()`) 
+  >Can you append a character field to the matrix?  Use the `cbind()` (column bind) command to bind a new column, called 'countries'. 
 
 ``` {r Matrix notation3}
 countries <- c("United States", "Pakistan", "Ireland", "China")
@@ -239,9 +247,11 @@ cbind(test_matrix,countries)
 
 #Note that I am not changing/overwriting the contents of test_matrix.  I could, but I'd have to change my code to
 #test_matrix <- cbind(test_matrix,countries)
+
+# How do you think you would append a new row to the matrix (hint: use `rbind()`) 
 ```
 
-Why is everything inside the table now enclosed in quotes?  Recall what we said about matrices only containing one data type.  What happens if I coerce this to a dataframe?
+  >Why is everything inside the table now enclosed in quotes?  Recall what we said about matrices only containing one data type.  What happens if I coerce this to a dataframe?
 
 ``` {r Dataframe}
 test_dataframe <- data.frame(test_matrix,countries)
@@ -250,7 +260,7 @@ test_dataframe
 class(test_dataframe)
 ```
 
-Can I rename the column headings?
+  >Can I rename the column headings?
 
 ``` {r Dataframe rename}
 names(test_dataframe) <- c("Val1", "Val2", "Val3", "Val4", "Val5", "Countries")
@@ -258,7 +268,7 @@ test_dataframe
 # Also see the colnames() function
 ```
 
-Can I use the same matrix notation to reference a particular row and column?  Are there other ways to reference a value?
+  >Can I use the same matrix notation to reference a particular row and column?  Are there other ways to reference a value?
 
 ``` {r Dataframe ref}
 test_dataframe[3,5]
@@ -276,7 +286,6 @@ ncol(test_dataframe)
 dim(test_dataframe)
 ```
 
-
 You can delete individual objects to clear your working directory (`rm(dataset)`), or start every script with the following command to make sure you are starting fresh (this is good programming practice):
 
 ```{r}
@@ -284,11 +293,9 @@ You can delete individual objects to clear your working directory (`rm(dataset)`
 ```
 
 ## Functions
+[R](https://cran.r-project.org/) functions can be defined as a collection of arguments structured together for carrying out a definite task. Functions have optional input and output arguments that return a value. Custom functions can be easily constructed in [R](https://cran.r-project.org/). Most often, however, we will use built-in functions within base packages or other downloadable packages.
 
-**R** functions can be defined as a collection of arguments structured together for carrying out a definite task. Functions have optional input and output arguments that return a value. Custom functions can be easily constructed in **R**. Most often, however, we will use built-in functions within base packages or other downloadable packages.
-
-Most functions have optional arguments or are given default values (in the function's help document, under the 'Usage' section, the optional arguments are given a default value following the "=" symbol). When you don't specify the optional arguments, they will take the default values. Functions normally can be called using the following format:
-function_name(input_data, argument1, argument2.)
+Most functions have optional arguments or are given default values (in the function's help document, under the 'Usage' section, the optional arguments are given a default value following the "=" symbol). When you don't specify the optional arguments, they will take the default values. Functions normally can be called using the following format: function_name(input_data, argument1, argument2).
 
 ```{r}
 print(2+2)
@@ -300,17 +307,17 @@ df.example <- cbind(x, y)
 df.example
 ```
 
-*?function_name*  can load the function help file.  Also note that any functions in non-base packages will require installing and loading that package. 
+`?function_name` can load the function help file.  Also note that any functions in non-base packages will require installing and loading that package. 
 
 Here, for example, we install and load package named "ggplot2" that we will use for data visualization.
+
 ```{r, eval=F}
 install.packages("ggplot2")
 library(ggplot2)
 ```
 
 ### Pre-existing Functions
-
-**R** also contains many pre-existing functions in the base software.  Numeric functions include `sum()`, `mean()`, `sd()`, `min()`, `max()`, `median()`, `range()`, `quantile()`, or `summary()`.  Try a few of these on the numeric vectors you have created.
+[R](https://cran.r-project.org/) also contains many pre-existing functions in the base software.  Numeric functions include `sum()`, `mean()`, `sd()`, `min()`, `max()`, `median()`, `range()`, `quantile()`, or `summary()`. Try a few of these on the numeric vectors you have created.
 
 ``` {r Vector functions}
 sum(x)
@@ -318,9 +325,8 @@ summary(x)
 range(y)
 ```
 
-### Calculations & Arithmetic Operators
-
-**R** can be used to perform basic calculations and report the results back to the user.
+## Calculations & Arithmetic Operators
+[R](https://cran.r-project.org/) can be used to perform basic calculations and report the results back to the user.
 
 ```{r calculations}
 4+2
@@ -339,35 +345,29 @@ max(vector_numbers)
 min(vector_numbers)
 ```
 
-> Can you calculate the square root and then subtract 5 for each element in vector_number?
+  >Can you calculate the square root and then subtract 5 for each element in vector_numbers?
 
-### Relational Operators
-<,>, =, !=, >=, <=, 
-Evaluate a conditional expression and return TRUE or FALSE
+## Relational Operators
+Relational operators (<,>, =, !=, >=, <=) evaluate a conditional expression and return TRUE or FALSE
 
 ```{r}
 3 > max(c(2,3,4,5))
 ```
 
-
-## Installing SWIRL
-  
-SWIRL is a user-generated program (also called a **package** or **library**) for learning how to code in **R**.  To access this, you must first install the package so it is accessible.  In the Console window (bottom left), type the following and press ENTER:
+# Installing SWIRL
+SWIRL is a user-generated program (also called a **package** or **library**) for learning how to code in [R](https://cran.r-project.org/).  To access the tutorial information, you must first install the package to make it accessible.  In the Console window (bottom left), type the following and press ENTER:
 
 ```{r install, eval = F}
 install.packages("swirl")
-
-# Data can also be installed locally if you've downloaded the zip file to your hard drive
-#install.packages("yourzip.tar.gz", repos=NULL)
 ```
 
-This may take a little while, but when the stop sign in the upper right of the console window is gone, you can proceed. For any package you install in **R**, you will also need to turn them on before using them. You can do this with the `require()` or `library()` functions. Type this now: 
+This may take a little while, but when the stop sign in the upper right of the console window is gone, you can proceed. For any package you install in [R](https://cran.r-project.org/), you will also need to turn them on before using them. You can do this with the `require()` or `library()` functions. Type this now: 
 
 ```{r install2, message=FALSE, warning = FALSE}
 library(swirl)
 ```
 
-*Note: You may be prompted to select a "mirror" from which to download the package. If this is the case, it is recommended that you choose the mirror that is geographically closest to you.*
+**Note**: You may be prompted to select a "mirror" from which to download the package. If this is the case, it is recommended that you choose the mirror that is geographically closest to you.
 
 To install the lesson, you will need to use:
 
@@ -377,9 +377,8 @@ install_from_swirl("R Programming")
 
 *Find out more about other courses, and other download options here: https://github.com/swirldev/swirl_courses*
 
-### SWIRL Lessons
-
-There are many lessons within **R**.  Once SWIRL is loaded (below), you will be given the option of which lessons to complete.  Some of the core lessons can be found in the initial section labeled **R Programming** (estimated time to compete required lessons is about 2 hours).  We recommend to start with the following lessons:
+## SWIRL Lessons
+There are many lessons within [R](https://cran.r-project.org/).  Once SWIRL is loaded, you will be given the option of which lessons to complete.  Some of the core lessons can be found in the initial section labeled **R Programming**. The estimated time to compete required lessons is about 2 hours.  We recommend to start with the following lessons:
 
   1. **Basic Building Blocks (10 min)**
   2. **Workspace and Files (15 min)**
@@ -397,8 +396,7 @@ There are many lessons within **R**.  Once SWIRL is loaded (below), you will be 
   14. Dates and Times (10 min)  (optional)
   15. **Base Graphics (10 Min)**
 
-### Run SWIRL
-
+## Run SWIRL
 Type the following to begin using SWIRL. Also, when restarting your session later, you’ll need to "turn on" SWIRL each time with either `library(swirl)` or `require(swirl)`. 
 
 ```{r install4, eval=F}
