@@ -2,4 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+*.Rmd
 Export_to_R.R
+IntroToR_Fig1.png
+IntroToR_Fig2.png
+IntroToR_Fig3.png
