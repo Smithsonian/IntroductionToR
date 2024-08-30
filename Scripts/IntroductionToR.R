@@ -8,6 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 ## ----eval = F-----------------------------------------------------------------------------------------------------
 ## setwd("C:/Documents/R_Practice")
+## # Note: There should be no need to set your working directly when working in a .Rproj.  This code is provided here only for reference.
 
 
 ## ----eval=F-------------------------------------------------------------------------------------------------------
@@ -15,72 +16,74 @@ knitr::opts_chunk$set(echo = TRUE)
 ## table <- read.csv(file="Data/TheDataIWantToReadIn.csv", header=TRUE) # read a csv table stored in the data folder
 
 
-## ----Data Types, message = FALSE, warning = FALSE-----------------------------------------------------------------
-city <- 'Nairobi'
-class(city)
+## ----Data Types, message = FALSE, warning = FALSE, eval = F-------------------------------------------------------
+## city <- 'Nairobi'
+## class(city)
+## 
+## number <- 3
+## class(number)
+## 
+## Integer <- as.integer(number)
+## class(Integer)
+## 
+## double <- 56.2
+## class(double)
+## is.numeric(double)
+## 
+## logical <- 3 > 5
+## logical
 
-number <- 3
-class(number)
 
-Integer <- as.integer(number)
-class(Integer)
+## ----eval=F-------------------------------------------------------------------------------------------------------
+## city <- "front royal"
+## city
+## 
+## (numbers <- c(1,3,5,12))
+## summary(numbers)
 
-logical <- 3 > 5
-logical
+
+## ----eval=F-------------------------------------------------------------------------------------------------------
+## # This is a comment
+## 
+## # Combining commands using ;
+## a <- 3; b <- 6; c <- a+b
+## a
+## b
+## c
+## 
+## # Multiple our numbers object by 3
+## numbers * 3
+
+
+## ----vectors, eval=F----------------------------------------------------------------------------------------------
+## 1:20
+## c(1,2,3,4,5)
+## seq(0,100,by=10)
+## rep(1:5,5)
+## rep("A rolling stone gathers no moss",4)
 
 
 ## ----eval=T-------------------------------------------------------------------------------------------------------
-city <- "front royal"
-summary(city)
-
-number <- 2
-summary(number)
-
-numbers <- c(1,3,5,12)
-summary(numbers)
-
-
-## -----------------------------------------------------------------------------------------------------------------
-# This is a comment
-
-
-## -----------------------------------------------------------------------------------------------------------------
-a <- 3; b <- 6; c <- a+b
-a
-b
-c
-
-
-## ----vectors------------------------------------------------------------------------------------------------------
-1:20
-c(1,2,3,4,5)
-seq(0,100,by=10)
-rep(1:5,5)
-rep("A rolling stone gathers no moss",4)
-
-
-## -----------------------------------------------------------------------------------------------------------------
-x <- 1:10
+# Create vectcor
+x <- c(1,3,8,21,48,56,4,29,182,5)
 x
-x[1:5]
+# Using vector notation, we can extract any number in the sequence.  For instance, x[4] will return the 4th number in the sequence
+x[4]
 
 
-## -----------------------------------------------------------------------------------------------------------------
-x[5]
-
-
-## -----------------------------------------------------------------------------------------------------------------
-x[c(2,4)]
-
-
-## -----------------------------------------------------------------------------------------------------------------
-x[-c(2,8)]
+## ----Question1, eval=F, echo=FALSE--------------------------------------------------------------------------------
+## x[5]
+## x[1:5]
+## x[c(2,4)]
+## x[-c(2,8)]
 
 
 ## ----Matrix1------------------------------------------------------------------------------------------------------
+# Create matrix
 test_matrix <- matrix(data = x, nrow = 4, ncol = 5)
 test_matrix
-# Note, I can assign any name to an object that I create.  Generally it is best to name things in a way that is meaningful, but we'll have some fun here!
+
+# Note, you can assign any name to an object (as below), but it is best practice to choose meaningful names. 
 superman <- matrix(data = x, nrow = 4, ncol = 5)
 
 
@@ -89,99 +92,76 @@ superman <- matrix(data = x, nrow = 4, ncol = 5)
 test_matrix[1,5]
 
 
-## ----Matrix notation2---------------------------------------------------------------------------------------------
-test_matrix[,5]
-# This literally says, extract all rows but only the 5th column from the object called test_matrix.
+## ----Matrix, eval=FALSE, echo=FALSE-------------------------------------------------------------------------------
+## test_matrix[,5]
+## test_matrix[4,]
+## test_matrix[3, c(2,4)]
 
 
-## ----Matrix notation2b--------------------------------------------------------------------------------------------
-test_matrix[4,]
-
-
-## ----Matrix notation2c--------------------------------------------------------------------------------------------
-test_matrix[3, c(2,4)]
-
-
-## ----Matrix notation3---------------------------------------------------------------------------------------------
+## ----Matrix add, eval=TRUE, echo=TRUE-----------------------------------------------------------------------------
 countries <- c("United States", "Pakistan", "Ireland", "China")
 cbind(test_matrix,countries)
 
-#Note that I am not changing/overwriting the contents of test_matrix.  I could, but I'd have to change my code to
+#Note that I am have not changed/overwritten the contents of test_matrix.  I could, but I'd have to change my code to
 #test_matrix <- cbind(test_matrix,countries)
 
-# How do you think you would append a new row to the matrix (hint: use `rbind()`) 
-
-
-## ----Dataframe----------------------------------------------------------------------------------------------------
 test_dataframe <- data.frame(test_matrix,countries)
 test_dataframe
+
 # Have I changed the file type?
 class(test_dataframe)
 
-
-## ----Dataframe rename---------------------------------------------------------------------------------------------
+# Rename columns, also see the colnames() function
 names(test_dataframe) <- c("Val1", "Val2", "Val3", "Val4", "Val5", "Countries")
 test_dataframe
-# Also see the colnames() function
 
 
-## ----Dataframe ref------------------------------------------------------------------------------------------------
-test_dataframe[3,5]
-test_dataframe[,5]
-test_dataframe$Val5[3]
-test_dataframe$Val5
-test_dataframe[,"Val5"]
+## ----Dataframe, eval=F, echo=T------------------------------------------------------------------------------------
+## # Use Vector notation or column headings to reference the dataframe
+## test_dataframe[3,5]
+## test_dataframe[,5]
+## test_dataframe$Val5[3]
+## test_dataframe$Val5
+## test_dataframe[,"Val5"]
+## 
+## # Summarize dataframe
+## nrow(test_dataframe)
+## ncol(test_dataframe)
+## dim(test_dataframe)
 
 
-## ----Dataframe dims-----------------------------------------------------------------------------------------------
-nrow(test_dataframe)
-ncol(test_dataframe)
-dim(test_dataframe)
+## ----Vector functions, eval=F, echo=T-----------------------------------------------------------------------------
+## sum(x)
+## summary(x)
+## range(x)
+
+
+## ----calculations, eval=F-----------------------------------------------------------------------------------------
+## # Additional, subtraction, multiplication, and division
+## 4+2
+## 6*8
+## (842-62)/3
+## 
+## # Exponentiate
+## 2^3
+## 
+## # Min and Max
+## vector_numbers <- c(2, 3, 4, 10)
+## max(vector_numbers)
+## min(vector_numbers)
 
 
 ## -----------------------------------------------------------------------------------------------------------------
-#rm(list=ls())
-
-
-## -----------------------------------------------------------------------------------------------------------------
-print(2+2)
-x <- matrix(1:10, 5, 2)
-x
-y <- matrix(1:5)
-y
-df.example <- cbind(x, y)
-df.example
+# What is the maximum value of a vector of values?
+3 > max(c(2,3,4,5))
 
 
 ## ----eval=F-------------------------------------------------------------------------------------------------------
-## install.packages("ggplot2")
-## library(ggplot2)
-
-
-## ----Vector functions---------------------------------------------------------------------------------------------
-sum(x)
-summary(x)
-range(y)
-
-
-## ----calculations-------------------------------------------------------------------------------------------------
-4+2
-6*8
-(842-62)/3
-
-
-## -----------------------------------------------------------------------------------------------------------------
-2^3
-
-
-## -----------------------------------------------------------------------------------------------------------------
-vector_numbers <- c(2, 3, 4, 10)
-max(vector_numbers) 
-min(vector_numbers)
-
-
-## -----------------------------------------------------------------------------------------------------------------
-3 > max(c(2,3,4,5))
+## # Clean your workspace/remove all objects
+## rm(list=ls())
+## 
+## # Remove an individual dataset
+## rm(dataset)
 
 
 ## ----install, eval = F--------------------------------------------------------------------------------------------
