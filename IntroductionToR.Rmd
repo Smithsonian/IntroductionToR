@@ -356,18 +356,6 @@ Relational operators (<, >, =, !=, >=, <=) evaluate a conditional expression and
 3 > max(c(2,3,4,5))
 ```
 
-# Clearing the Environment
-
-You'll find that your Environment (Workspace) in the upper right panel will quickly become cluttered with user-defined objects.  It's generally good practice to work with a clean Workspace when starting a session.  You can also remove individual files should you need to do so (`rm(dataset)`).  I generaly start all my scripts with the following command to make sure you are starting fresh, something we will do to help develop good good programming practices.
-
-```{r, eval=F}
-# Clean your workspace/remove all objects
-rm(list=ls())
-
-# Remove an individual dataset
-rm(dataset)
-```
-
 # Other Resources: SWIRL
 
 R packages are the building blocks of computational reproducibility in R. Each package contains a set of related functions that enable you to more easily do a task or set of tasks in R. There are thousands of community-maintained packages out there for just about every imaginable use of R.
