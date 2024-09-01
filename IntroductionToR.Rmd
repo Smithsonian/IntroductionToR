@@ -27,8 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Run code and basic mathematical functions in the Console
 * Learn to use `help()` to look up function documentation
 
-This lesson is a compilation of material developed by Ramiro Crego, Grant Connette, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge.  We have also incorporated materials from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the resources freely available at [NCEAS](https://learning.nceas.ucsb.edu/).
-
+This lesson is a compilation of material developed by Grant Connette, Ramiro Crego, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge. in courses being taught at the Smithsonian-Mason School of Conservation.  We have also incorporated material from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the courses being taught at [SMSC](https://smconservation.gmu.edu/programs/graduate-and-professional/) and the resources available at [NCEAS](https://learning.nceas.ucsb.edu/) and .
 
 # Introduction
   >What is R?  Why use R?
@@ -63,7 +62,7 @@ R-Studio has four separate panels to organize your workflow and project. The ent
 * Environment/History (upper right)
 * Files/Plots/Packages/Help (lower left)
 
-![Figure 1: R-Studio, shoing the 4 panel interface: Source (code) Editor, Console, Environment/History, and Files/Plots/Packages/Help.](IntroToR_Fig2.png)
+![Figure 1: R-Studio, showing the 4 panel interface: Source (code) Editor, Console, Environment/History, and Files/Plots/Packages/Help.](IntroToR_Fig2.png)
 
 ## Getting Help
 
@@ -222,10 +221,10 @@ x[4]
 
 **Questions**: 
   
-* What is the 5th value in the x vector?
-* How would you extract the first 5 numbers of the vector?
-* What is the 2nd and 4th value of x?
-* Show all values except for the 2nd and 8th element of x
+1. What is the 5th value in the x vector?
+2. How would you extract the first 5 numbers of the vector?
+3. What is the 2nd and 4th value of x?
+4. Show all values except for the 2nd and 8th element of x
   
 ```{r Question1, eval=F, echo=FALSE}
 x[5]
@@ -260,9 +259,9 @@ In addition to using positive integers to indicate the exact location of the sub
 
 **Questions**:
 
-  * What is the value in the 5th column? 
-  * What is the value in the 4th row?
-  * What are the values in the 3rd row, but only the 2nd and 4th columns?
+1. What is the value in the 5th column? 
+2. What is the value in the 4th row?
+3. What are the values in the 3rd row, but only the 2nd and 4th columns?
   
 ``` {r Matrix, eval=FALSE, echo=FALSE}
 test_matrix[,5]
@@ -339,7 +338,7 @@ min(vector_numbers)
 
 **Question**:
 
-  * Calculate the square root and then subtract 5 for each element in vector_numbers above?
+1. Calculate the square root and then subtract 5 for each element in vector_numbers above?
 
 ## Logical Operations and Expressions
 Relational operators (<, >, =, !=, >=, <=) evaluate a conditional expression and return `TRUE` or `FALSE`.  Commonly used relational operators include:
