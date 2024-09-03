@@ -72,6 +72,10 @@ The internet also contains a vast quantity of useful information.  There are blo
 
 Note that it's important to read the error messages that R provides.  These help understand when you have typed something that the computer doesn't understand.  Google them (copy-and-paste) to figure out what they mean.
 
+![Artwork by [Allison Horst](https://allisonhorst.com/allison-horst)](AllisonHorst_Rerrors.png)
+
+<br>
+
 # Basic R Concepts
 
 There are a few concepts that are important to keep in mind before you start coding. The fact that R is a programming language may deter some users who think “I can't program". This should not be the case for two reasons. First, R is an interpreted language, not a compiled one, meaning that all commands typed on the keyboard are directly executed without requiring you to build a complete program like most other computer languages (e.g., C, Pascal). Second, R's syntax is very simple and intuitive. For instance, a linear regression can be done with the command `lm(y ~ x)` which means fitting a linear model with `y` as the response and `x` as a predictor.  You all speak multiple languages.  Learning to code in R should just be viewed as another language that requires time and practice. 
