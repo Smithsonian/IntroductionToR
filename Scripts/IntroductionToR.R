@@ -156,14 +156,6 @@ test_dataframe
 3 > max(c(2,3,4,5))
 
 
-## ----eval=F-------------------------------------------------------------------------------------------------------
-## # Clean your workspace/remove all objects
-## rm(list=ls())
-## 
-## # Remove an individual dataset
-## rm(dataset)
-
-
 ## ----install, eval = F--------------------------------------------------------------------------------------------
 ## install.packages("swirl")
 
