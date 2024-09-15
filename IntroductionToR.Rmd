@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Run code and basic mathematical functions in the Console
 * Learn to use `help()` to look up function documentation
 
-This lesson is a compilation of material developed by Grant Connette, Ramiro Crego, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge. in courses being taught at the Smithsonian-Mason School of Conservation.  We have also incorporated material from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the courses being taught at [SMSC](https://smconservation.gmu.edu/programs/graduate-and-professional/) and the resources available at [NCEAS](https://learning.nceas.ucsb.edu/) and .
+This lesson is a compilation of material developed by Grant Connette, Ramiro Crego, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge. in courses being taught at the Smithsonian-Mason School of Conservation.  We have also incorporated material from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the courses being taught at [SMSC](https://smconservation.gmu.edu/programs/graduate-and-professional/) and the resources available at [NCEAS](https://learning.nceas.ucsb.edu/).
 
 # Introduction
   >What is R?  Why use R?
