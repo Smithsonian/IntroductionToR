@@ -27,7 +27,7 @@ knitr::opts_chunk$set(echo = TRUE)
 * Run code and basic mathematical functions in the Console
 * Learn to use `help()` to look up function documentation
 
-This lesson is a compilation of material developed by Grant Connette, Ramiro Crego, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge. in courses being taught at the Smithsonian-Mason School of Conservation.  We have also incorporated material from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the courses being taught at [SMSC](https://smconservation.gmu.edu/programs/graduate-and-professional/) and the resources available at [NCEAS](https://learning.nceas.ucsb.edu/).
+This lesson is a compilation of material developed by Grant Connette, Ramiro Crego, Qiongyu Huang, Joseph Kolowski, Fernanda Ribeiro, and Jared Stabach.  Many thanks to all for sharing their code and knowledge in courses being taught at the Smithsonian-Mason School of Conservation (SMSC).  We have also incorporated material from workflows developed by the National Center for Ecological Analysis and Synthesis (NCEAS) of the University of California - Santa Barbara.  We encourage you to investigate the courses being taught at [SMSC](https://smconservation.gmu.edu/programs/graduate-and-professional/) and the resources available at [NCEAS](https://learning.nceas.ucsb.edu/).
 
 # Introduction
   >What is R?  Why use R?
@@ -145,7 +145,7 @@ There are four fundamental data types in R that you will work with:
 3. Integer: Data are whole numbers (no decimal point)
 4. Logical (also called boolean): Data that are either `TRUE`, `FALSE`, or `NA`
 
-You can check the data type of an object using the function `class()` or using logical tests such as `is.numeric()`, `is.character()`, and `is.logical()`. To convert between data types you can use: `as.integer()`,  `as.numeric()`, `as.logical()`, `as. character()`.
+You can check the data type of an object using the function `class()` or using logical tests such as `is.numeric()`, `is.character()`, and `is.logical()`. To convert between data types you can use: `as.integer()`,  `as.numeric()`, `as.logical()`, `as.character()`.
 
 For instance:
 ```{r Data Types, message = FALSE, warning = FALSE, eval = F}
