@@ -166,7 +166,7 @@ logical <- 3 > 5
 logical
 ```
 
-## Assigning Data to Objects
+## wwwww Assigning Data to Objects
 Since R is a programming language, we can store information as objects to avoid unnecessary repetition.  To keep information in R, we need to create an **object**. We can assign a value of a mathematical operation (and more) to an object in R using the assignment operator `<-` (greater than sign and minus sign).  The general format for using the assignment operator in R is: `object_name <- value`.  By doing so, we can re-use the object and use it in additional calculations.
 
   >Note: After creating an object, R doesn't print anything to the screen.  We can force R to print the object by calling the object name (i.e., by typing it out) or by using parentheses.  In addition, if we look at our Environment tab (upper right panel), we will see that the object has been stored in R.
