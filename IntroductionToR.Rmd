@@ -1,6 +1,6 @@
 ---
 title: "An Introduction to R Programming"
-author: "Jared A Stabach, Ramiro D Crego, Joseph Kolowski, Grant Connette, Fernanda Ribeiro, and Qiongyu Huanga - Smithsonian's National Zoo & Conservation Biology Institute"
+author: "Smithsonian's National Zoo & Conservation Biology Institute"
 date: '`r format(Sys.time(), "%d %B %Y")`'
 output:
   html_document:
